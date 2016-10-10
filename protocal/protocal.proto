@@ -1,0 +1,11 @@
+syntax = "proto3";
+package com.aim.game_base.entity.net.base;
+message Request{
+	sint32 protocal = 1;
+	bytes data=2;
+}
+message Response{
+	sint32 protocal = 1;
+	bytes data=2;
+}
+

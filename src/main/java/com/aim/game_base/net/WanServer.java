@@ -29,8 +29,8 @@ public class WanServer {
 		startServer(new HttpServerCodec(), handler, inetSocketAddress);
 	}
 	
-	public static void startServer(IoFilter ioFilter, IoHandlerAdapter handler, InetSocketAddress inetSocketAddress,
-			WanServerType type) {
+	public static void startServer(IoHandlerAdapter handler, InetSocketAddress inetSocketAddress, WanServerType type) {
+		IoFilter ioFilter = new ProtocolCodecFilter(new MessageCodecFactory(Charset.forName("UTF-8")));
 		switch (type) {
 		case TCP:
 			startServer(ioFilter, handler, inetSocketAddress);

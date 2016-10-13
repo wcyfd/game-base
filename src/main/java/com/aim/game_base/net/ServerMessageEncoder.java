@@ -7,11 +7,11 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolEncoderAdapter;
 import org.apache.mina.filter.codec.ProtocolEncoderOutput;
 
-import com.aim.game_base.entity.net.base.Protocal.Response;
+import com.aim.game_base.entity.net.base.Protocal.SC;
 
-public class MessageEncoder extends ProtocolEncoderAdapter {
+public class ServerMessageEncoder extends ProtocolEncoderAdapter {
 	public void encode(IoSession session, Object message, ProtocolEncoderOutput out) throws Exception {
-		Response.Builder builder = (Response.Builder) message;
+		SC.Builder builder = (SC.Builder) message;
 		byte[] bytes = builder.build().toByteArray();
 		IoBuffer buffer = IoBuffer.allocate(bytes.length + 4).setAutoExpand(true);
 		buffer.order(ByteOrder.LITTLE_ENDIAN);

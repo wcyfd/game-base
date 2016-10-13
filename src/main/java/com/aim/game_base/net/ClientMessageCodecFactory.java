@@ -11,13 +11,13 @@ import org.apache.mina.filter.codec.ProtocolEncoder;
  * 消息处理工厂
  *
  */
-public class MessageCodecFactory implements ProtocolCodecFactory{
-	private final MessageEncoder encoder;
-	private final MessageDecoder decoder;
+public class ClientMessageCodecFactory implements ProtocolCodecFactory{
+	private final ClientMessageEncoder encoder;
+	private final ClientMessageDecoder decoder;
 	
-	public MessageCodecFactory(Charset charset) {
-		this.encoder = new MessageEncoder();
-		this.decoder = new MessageDecoder();
+	public ClientMessageCodecFactory(Charset charset) {
+		this.encoder = new ClientMessageEncoder();
+		this.decoder = new ClientMessageDecoder();
 	}
 	
 	

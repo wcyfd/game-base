@@ -17,20 +17,20 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
 public class WanServer {
 	public static enum WanServerType {
-		TCP, UDP;
+		TCP, UDP, HTTP;
 	}
 
-//	public static void startIOServer(IoHandlerProxy handler, InetSocketAddress inetSocketAddress) {
-//		startServer(new ProtocolCodecFilter(new MessageCodecFactory(Charset.forName("UTF-8"))),
-//				handler, inetSocketAddress, WanServerType.UDP);
+//	public static void startIOServer(IoHandlerAdapter handler, InetSocketAddress inetSocketAddress) {
+//		startServer(new ProtocolCodecFilter(new ServerMessageCodecFactory(Charset.forName("UTF-8"))), handler,
+//				inetSocketAddress, WanServerType.HTTP);
+//	}
+//
+//	public static void startHttpServer(IoHandlerAdapter handler, InetSocketAddress inetSocketAddress) {
+//		startServer(new HttpServerCodec(), handler, inetSocketAddress);
 //	}
 
-	public static void startHttpServer(IoHandlerAdapter handler, InetSocketAddress inetSocketAddress) {
-		startServer(new HttpServerCodec(), handler, inetSocketAddress);
-	}
-	
 	public static void startServer(IoHandlerAdapter handler, InetSocketAddress inetSocketAddress, WanServerType type) {
-		IoFilter ioFilter = new ProtocolCodecFilter(new MessageCodecFactory(Charset.forName("UTF-8")));
+		IoFilter ioFilter = new ProtocolCodecFilter(new ServerMessageCodecFactory(Charset.forName("UTF-8")));
 		switch (type) {
 		case TCP:
 			startServer(ioFilter, handler, inetSocketAddress);
@@ -38,9 +38,13 @@ public class WanServer {
 		case UDP:
 			UDPServer(ioFilter, handler, inetSocketAddress);
 			break;
+		case HTTP:
+			startServer(new HttpServerCodec(), handler, inetSocketAddress);
+			break;
+
 		}
 	}
-	
+
 	private static void UDPServer(IoFilter ioFilter, IoHandlerAdapter handler, InetSocketAddress inetSocketAddress) {
 		NioDatagramAcceptor ioAcceptor = new NioDatagramAcceptor();
 
@@ -64,8 +68,6 @@ public class WanServer {
 			throw new RuntimeException(e);
 		}
 	}
-
-	
 
 	public static void startServer(IoFilter ioFilter, IoHandlerAdapter handler, InetSocketAddress inetSocketAddress) {
 		NioSocketAcceptor ioAcceptor = new NioSocketAcceptor();

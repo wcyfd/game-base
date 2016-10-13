@@ -7,9 +7,9 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.CumulativeProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 
-import com.aim.game_base.entity.net.base.Protocal.Request;
+import com.aim.game_base.entity.net.base.Protocal.CS;
 
-public class MessageDecoder extends CumulativeProtocolDecoder {
+public class ServerMessageDecoder extends CumulativeProtocolDecoder {
 	protected boolean doDecode(IoSession session, IoBuffer in, ProtocolDecoderOutput out) throws Exception {
 
 		in.order(ByteOrder.LITTLE_ENDIAN);
@@ -35,7 +35,7 @@ public class MessageDecoder extends CumulativeProtocolDecoder {
 			IoBuffer params = IoBuffer.wrap(data);
 			params.order(ByteOrder.LITTLE_ENDIAN);
 			
-			Request request = Request.parseFrom(data);
+			CS request = CS.parseFrom(data);
 			out.write(request);
 
 			if (in.remaining() > 0) {

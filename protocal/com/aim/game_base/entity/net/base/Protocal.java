@@ -14,8 +14,8 @@ public final class Protocal {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.aim.game_base.entity.net.base.Request)
+  public interface CSOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.aim.game_base.entity.net.base.CS)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -29,17 +29,17 @@ public final class Protocal {
     com.google.protobuf.ByteString getData();
   }
   /**
-   * Protobuf type {@code com.aim.game_base.entity.net.base.Request}
+   * Protobuf type {@code com.aim.game_base.entity.net.base.CS}
    */
-  public  static final class Request extends
+  public  static final class CS extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.aim.game_base.entity.net.base.Request)
-      RequestOrBuilder {
-    // Use Request.newBuilder() to construct.
-    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:com.aim.game_base.entity.net.base.CS)
+      CSOrBuilder {
+    // Use CS.newBuilder() to construct.
+    private CS(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Request() {
+    private CS() {
       protocal_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
@@ -49,7 +49,7 @@ public final class Protocal {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private Request(
+    private CS(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -92,14 +92,14 @@ public final class Protocal {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Request_descriptor;
+      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_CS_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Request_fieldAccessorTable
+      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_CS_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aim.game_base.entity.net.base.Protocal.Request.class, com.aim.game_base.entity.net.base.Protocal.Request.Builder.class);
+              com.aim.game_base.entity.net.base.Protocal.CS.class, com.aim.game_base.entity.net.base.Protocal.CS.Builder.class);
     }
 
     public static final int PROTOCAL_FIELD_NUMBER = 1;
@@ -163,10 +163,10 @@ public final class Protocal {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aim.game_base.entity.net.base.Protocal.Request)) {
+      if (!(obj instanceof com.aim.game_base.entity.net.base.Protocal.CS)) {
         return super.equals(obj);
       }
-      com.aim.game_base.entity.net.base.Protocal.Request other = (com.aim.game_base.entity.net.base.Protocal.Request) obj;
+      com.aim.game_base.entity.net.base.Protocal.CS other = (com.aim.game_base.entity.net.base.Protocal.CS) obj;
 
       boolean result = true;
       result = result && (getProtocal()
@@ -192,58 +192,58 @@ public final class Protocal {
       return hash;
     }
 
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(byte[] data)
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(java.io.InputStream input)
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseDelimitedFrom(java.io.InputStream input)
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseDelimitedFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Request parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.CS parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -255,7 +255,7 @@ public final class Protocal {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aim.game_base.entity.net.base.Protocal.Request prototype) {
+    public static Builder newBuilder(com.aim.game_base.entity.net.base.Protocal.CS prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -270,25 +270,25 @@ public final class Protocal {
       return builder;
     }
     /**
-     * Protobuf type {@code com.aim.game_base.entity.net.base.Request}
+     * Protobuf type {@code com.aim.game_base.entity.net.base.CS}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.aim.game_base.entity.net.base.Request)
-        com.aim.game_base.entity.net.base.Protocal.RequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.aim.game_base.entity.net.base.CS)
+        com.aim.game_base.entity.net.base.Protocal.CSOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Request_descriptor;
+        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_CS_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Request_fieldAccessorTable
+        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_CS_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aim.game_base.entity.net.base.Protocal.Request.class, com.aim.game_base.entity.net.base.Protocal.Request.Builder.class);
+                com.aim.game_base.entity.net.base.Protocal.CS.class, com.aim.game_base.entity.net.base.Protocal.CS.Builder.class);
       }
 
-      // Construct using com.aim.game_base.entity.net.base.Protocal.Request.newBuilder()
+      // Construct using com.aim.game_base.entity.net.base.Protocal.CS.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -314,23 +314,23 @@ public final class Protocal {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Request_descriptor;
+        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_CS_descriptor;
       }
 
-      public com.aim.game_base.entity.net.base.Protocal.Request getDefaultInstanceForType() {
-        return com.aim.game_base.entity.net.base.Protocal.Request.getDefaultInstance();
+      public com.aim.game_base.entity.net.base.Protocal.CS getDefaultInstanceForType() {
+        return com.aim.game_base.entity.net.base.Protocal.CS.getDefaultInstance();
       }
 
-      public com.aim.game_base.entity.net.base.Protocal.Request build() {
-        com.aim.game_base.entity.net.base.Protocal.Request result = buildPartial();
+      public com.aim.game_base.entity.net.base.Protocal.CS build() {
+        com.aim.game_base.entity.net.base.Protocal.CS result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.aim.game_base.entity.net.base.Protocal.Request buildPartial() {
-        com.aim.game_base.entity.net.base.Protocal.Request result = new com.aim.game_base.entity.net.base.Protocal.Request(this);
+      public com.aim.game_base.entity.net.base.Protocal.CS buildPartial() {
+        com.aim.game_base.entity.net.base.Protocal.CS result = new com.aim.game_base.entity.net.base.Protocal.CS(this);
         result.protocal_ = protocal_;
         result.data_ = data_;
         onBuilt();
@@ -364,16 +364,16 @@ public final class Protocal {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aim.game_base.entity.net.base.Protocal.Request) {
-          return mergeFrom((com.aim.game_base.entity.net.base.Protocal.Request)other);
+        if (other instanceof com.aim.game_base.entity.net.base.Protocal.CS) {
+          return mergeFrom((com.aim.game_base.entity.net.base.Protocal.CS)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aim.game_base.entity.net.base.Protocal.Request other) {
-        if (other == com.aim.game_base.entity.net.base.Protocal.Request.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aim.game_base.entity.net.base.Protocal.CS other) {
+        if (other == com.aim.game_base.entity.net.base.Protocal.CS.getDefaultInstance()) return this;
         if (other.getProtocal() != 0) {
           setProtocal(other.getProtocal());
         }
@@ -392,11 +392,11 @@ public final class Protocal {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.aim.game_base.entity.net.base.Protocal.Request parsedMessage = null;
+        com.aim.game_base.entity.net.base.Protocal.CS parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.aim.game_base.entity.net.base.Protocal.Request) e.getUnfinishedMessage();
+          parsedMessage = (com.aim.game_base.entity.net.base.Protocal.CS) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -471,46 +471,46 @@ public final class Protocal {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.aim.game_base.entity.net.base.Request)
+      // @@protoc_insertion_point(builder_scope:com.aim.game_base.entity.net.base.CS)
     }
 
-    // @@protoc_insertion_point(class_scope:com.aim.game_base.entity.net.base.Request)
-    private static final com.aim.game_base.entity.net.base.Protocal.Request DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.aim.game_base.entity.net.base.CS)
+    private static final com.aim.game_base.entity.net.base.Protocal.CS DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aim.game_base.entity.net.base.Protocal.Request();
+      DEFAULT_INSTANCE = new com.aim.game_base.entity.net.base.Protocal.CS();
     }
 
-    public static com.aim.game_base.entity.net.base.Protocal.Request getDefaultInstance() {
+    public static com.aim.game_base.entity.net.base.Protocal.CS getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Request>
-        PARSER = new com.google.protobuf.AbstractParser<Request>() {
-      public Request parsePartialFrom(
+    private static final com.google.protobuf.Parser<CS>
+        PARSER = new com.google.protobuf.AbstractParser<CS>() {
+      public CS parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Request(input, extensionRegistry);
+          return new CS(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Request> parser() {
+    public static com.google.protobuf.Parser<CS> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Request> getParserForType() {
+    public com.google.protobuf.Parser<CS> getParserForType() {
       return PARSER;
     }
 
-    public com.aim.game_base.entity.net.base.Protocal.Request getDefaultInstanceForType() {
+    public com.aim.game_base.entity.net.base.Protocal.CS getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.aim.game_base.entity.net.base.Response)
+  public interface SCOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.aim.game_base.entity.net.base.SC)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -524,17 +524,17 @@ public final class Protocal {
     com.google.protobuf.ByteString getData();
   }
   /**
-   * Protobuf type {@code com.aim.game_base.entity.net.base.Response}
+   * Protobuf type {@code com.aim.game_base.entity.net.base.SC}
    */
-  public  static final class Response extends
+  public  static final class SC extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.aim.game_base.entity.net.base.Response)
-      ResponseOrBuilder {
-    // Use Response.newBuilder() to construct.
-    private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:com.aim.game_base.entity.net.base.SC)
+      SCOrBuilder {
+    // Use SC.newBuilder() to construct.
+    private SC(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Response() {
+    private SC() {
       protocal_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
@@ -544,7 +544,7 @@ public final class Protocal {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private Response(
+    private SC(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -587,14 +587,14 @@ public final class Protocal {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Response_descriptor;
+      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_SC_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Response_fieldAccessorTable
+      return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_SC_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.aim.game_base.entity.net.base.Protocal.Response.class, com.aim.game_base.entity.net.base.Protocal.Response.Builder.class);
+              com.aim.game_base.entity.net.base.Protocal.SC.class, com.aim.game_base.entity.net.base.Protocal.SC.Builder.class);
     }
 
     public static final int PROTOCAL_FIELD_NUMBER = 1;
@@ -658,10 +658,10 @@ public final class Protocal {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.aim.game_base.entity.net.base.Protocal.Response)) {
+      if (!(obj instanceof com.aim.game_base.entity.net.base.Protocal.SC)) {
         return super.equals(obj);
       }
-      com.aim.game_base.entity.net.base.Protocal.Response other = (com.aim.game_base.entity.net.base.Protocal.Response) obj;
+      com.aim.game_base.entity.net.base.Protocal.SC other = (com.aim.game_base.entity.net.base.Protocal.SC) obj;
 
       boolean result = true;
       result = result && (getProtocal()
@@ -687,58 +687,58 @@ public final class Protocal {
       return hash;
     }
 
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(byte[] data)
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(java.io.InputStream input)
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseDelimitedFrom(java.io.InputStream input)
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseDelimitedFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.aim.game_base.entity.net.base.Protocal.Response parseFrom(
+    public static com.aim.game_base.entity.net.base.Protocal.SC parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -750,7 +750,7 @@ public final class Protocal {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.aim.game_base.entity.net.base.Protocal.Response prototype) {
+    public static Builder newBuilder(com.aim.game_base.entity.net.base.Protocal.SC prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -765,25 +765,25 @@ public final class Protocal {
       return builder;
     }
     /**
-     * Protobuf type {@code com.aim.game_base.entity.net.base.Response}
+     * Protobuf type {@code com.aim.game_base.entity.net.base.SC}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.aim.game_base.entity.net.base.Response)
-        com.aim.game_base.entity.net.base.Protocal.ResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.aim.game_base.entity.net.base.SC)
+        com.aim.game_base.entity.net.base.Protocal.SCOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Response_descriptor;
+        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_SC_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Response_fieldAccessorTable
+        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_SC_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.aim.game_base.entity.net.base.Protocal.Response.class, com.aim.game_base.entity.net.base.Protocal.Response.Builder.class);
+                com.aim.game_base.entity.net.base.Protocal.SC.class, com.aim.game_base.entity.net.base.Protocal.SC.Builder.class);
       }
 
-      // Construct using com.aim.game_base.entity.net.base.Protocal.Response.newBuilder()
+      // Construct using com.aim.game_base.entity.net.base.Protocal.SC.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -809,23 +809,23 @@ public final class Protocal {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_Response_descriptor;
+        return com.aim.game_base.entity.net.base.Protocal.internal_static_com_aim_game_base_entity_net_base_SC_descriptor;
       }
 
-      public com.aim.game_base.entity.net.base.Protocal.Response getDefaultInstanceForType() {
-        return com.aim.game_base.entity.net.base.Protocal.Response.getDefaultInstance();
+      public com.aim.game_base.entity.net.base.Protocal.SC getDefaultInstanceForType() {
+        return com.aim.game_base.entity.net.base.Protocal.SC.getDefaultInstance();
       }
 
-      public com.aim.game_base.entity.net.base.Protocal.Response build() {
-        com.aim.game_base.entity.net.base.Protocal.Response result = buildPartial();
+      public com.aim.game_base.entity.net.base.Protocal.SC build() {
+        com.aim.game_base.entity.net.base.Protocal.SC result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.aim.game_base.entity.net.base.Protocal.Response buildPartial() {
-        com.aim.game_base.entity.net.base.Protocal.Response result = new com.aim.game_base.entity.net.base.Protocal.Response(this);
+      public com.aim.game_base.entity.net.base.Protocal.SC buildPartial() {
+        com.aim.game_base.entity.net.base.Protocal.SC result = new com.aim.game_base.entity.net.base.Protocal.SC(this);
         result.protocal_ = protocal_;
         result.data_ = data_;
         onBuilt();
@@ -859,16 +859,16 @@ public final class Protocal {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.aim.game_base.entity.net.base.Protocal.Response) {
-          return mergeFrom((com.aim.game_base.entity.net.base.Protocal.Response)other);
+        if (other instanceof com.aim.game_base.entity.net.base.Protocal.SC) {
+          return mergeFrom((com.aim.game_base.entity.net.base.Protocal.SC)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.aim.game_base.entity.net.base.Protocal.Response other) {
-        if (other == com.aim.game_base.entity.net.base.Protocal.Response.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.aim.game_base.entity.net.base.Protocal.SC other) {
+        if (other == com.aim.game_base.entity.net.base.Protocal.SC.getDefaultInstance()) return this;
         if (other.getProtocal() != 0) {
           setProtocal(other.getProtocal());
         }
@@ -887,11 +887,11 @@ public final class Protocal {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.aim.game_base.entity.net.base.Protocal.Response parsedMessage = null;
+        com.aim.game_base.entity.net.base.Protocal.SC parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.aim.game_base.entity.net.base.Protocal.Response) e.getUnfinishedMessage();
+          parsedMessage = (com.aim.game_base.entity.net.base.Protocal.SC) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -966,54 +966,54 @@ public final class Protocal {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.aim.game_base.entity.net.base.Response)
+      // @@protoc_insertion_point(builder_scope:com.aim.game_base.entity.net.base.SC)
     }
 
-    // @@protoc_insertion_point(class_scope:com.aim.game_base.entity.net.base.Response)
-    private static final com.aim.game_base.entity.net.base.Protocal.Response DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.aim.game_base.entity.net.base.SC)
+    private static final com.aim.game_base.entity.net.base.Protocal.SC DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.aim.game_base.entity.net.base.Protocal.Response();
+      DEFAULT_INSTANCE = new com.aim.game_base.entity.net.base.Protocal.SC();
     }
 
-    public static com.aim.game_base.entity.net.base.Protocal.Response getDefaultInstance() {
+    public static com.aim.game_base.entity.net.base.Protocal.SC getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Response>
-        PARSER = new com.google.protobuf.AbstractParser<Response>() {
-      public Response parsePartialFrom(
+    private static final com.google.protobuf.Parser<SC>
+        PARSER = new com.google.protobuf.AbstractParser<SC>() {
+      public SC parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Response(input, extensionRegistry);
+          return new SC(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Response> parser() {
+    public static com.google.protobuf.Parser<SC> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Response> getParserForType() {
+    public com.google.protobuf.Parser<SC> getParserForType() {
       return PARSER;
     }
 
-    public com.aim.game_base.entity.net.base.Protocal.Response getDefaultInstanceForType() {
+    public com.aim.game_base.entity.net.base.Protocal.SC getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_aim_game_base_entity_net_base_Request_descriptor;
+    internal_static_com_aim_game_base_entity_net_base_CS_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_aim_game_base_entity_net_base_Request_fieldAccessorTable;
+      internal_static_com_aim_game_base_entity_net_base_CS_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_aim_game_base_entity_net_base_Response_descriptor;
+    internal_static_com_aim_game_base_entity_net_base_SC_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_aim_game_base_entity_net_base_Response_fieldAccessorTable;
+      internal_static_com_aim_game_base_entity_net_base_SC_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1024,9 +1024,9 @@ public final class Protocal {
   static {
     java.lang.String[] descriptorData = {
       "\n\016protocal.proto\022!com.aim.game_base.enti" +
-      "ty.net.base\")\n\007Request\022\020\n\010protocal\030\001 \001(\021" +
-      "\022\014\n\004data\030\002 \001(\014\"*\n\010Response\022\020\n\010protocal\030\001" +
-      " \001(\021\022\014\n\004data\030\002 \001(\014b\006proto3"
+      "ty.net.base\"$\n\002CS\022\020\n\010protocal\030\001 \001(\021\022\014\n\004d" +
+      "ata\030\002 \001(\014\"$\n\002SC\022\020\n\010protocal\030\001 \001(\021\022\014\n\004dat" +
+      "a\030\002 \001(\014b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1040,17 +1040,17 @@ public final class Protocal {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_aim_game_base_entity_net_base_Request_descriptor =
+    internal_static_com_aim_game_base_entity_net_base_CS_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_aim_game_base_entity_net_base_Request_fieldAccessorTable = new
+    internal_static_com_aim_game_base_entity_net_base_CS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_aim_game_base_entity_net_base_Request_descriptor,
+        internal_static_com_aim_game_base_entity_net_base_CS_descriptor,
         new java.lang.String[] { "Protocal", "Data", });
-    internal_static_com_aim_game_base_entity_net_base_Response_descriptor =
+    internal_static_com_aim_game_base_entity_net_base_SC_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_aim_game_base_entity_net_base_Response_fieldAccessorTable = new
+    internal_static_com_aim_game_base_entity_net_base_SC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_aim_game_base_entity_net_base_Response_descriptor,
+        internal_static_com_aim_game_base_entity_net_base_SC_descriptor,
         new java.lang.String[] { "Protocal", "Data", });
   }
 

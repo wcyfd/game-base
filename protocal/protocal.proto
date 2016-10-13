@@ -1,10 +1,10 @@
 syntax = "proto3";
 package com.aim.game_base.entity.net.base;
-message Request{
+message CS{
 	sint32 protocal = 1;
 	bytes data=2;
 }
-message Response{
+message SC{
 	sint32 protocal = 1;
 	bytes data=2;
 }

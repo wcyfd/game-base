@@ -11,8 +11,8 @@ import com.aim.game_base.entity.net.base.Protocal.SC;
 
 public class ServerMessageEncoder extends ProtocolEncoderAdapter {
 	public void encode(IoSession session, Object message, ProtocolEncoderOutput out) throws Exception {
-		SC.Builder builder = (SC.Builder) message;
-		byte[] bytes = builder.build().toByteArray();
+		SC sc = (SC) message;
+		byte[] bytes = sc.toByteArray();
 		IoBuffer buffer = IoBuffer.allocate(bytes.length + 4).setAutoExpand(true);
 		buffer.order(ByteOrder.LITTLE_ENDIAN);
 		buffer.putInt(bytes.length);

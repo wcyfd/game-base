@@ -62,8 +62,8 @@ public class WanClient {
 		return session;
 	}
 
-	public void send(CS.Builder builder) {
-		getSession().write(builder);
+	public void send(CS cs) {
+		getSession().write(cs);
 	}
 
 }

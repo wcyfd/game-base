@@ -1,4 +1,4 @@
-package com.aim.game_base.net;
+package com.aim.game_base.net.protocal.proto;
 
 import java.nio.charset.Charset;
 
@@ -11,13 +11,13 @@ import org.apache.mina.filter.codec.ProtocolEncoder;
  * 消息处理工厂
  *
  */
-public class ClientMessageCodecFactory implements ProtocolCodecFactory{
-	private final ClientMessageEncoder encoder;
-	private final ClientMessageDecoder decoder;
+public class ProtobufMessageCodecFactory implements ProtocolCodecFactory{
+	private final ProtobufMessageEncoder encoder;
+	private final ProtobufMessageDecoder decoder;
 	
-	public ClientMessageCodecFactory(Charset charset) {
-		this.encoder = new ClientMessageEncoder();
-		this.decoder = new ClientMessageDecoder();
+	public ProtobufMessageCodecFactory(Charset charset) {
+		this.encoder = new ProtobufMessageEncoder();
+		this.decoder = new ProtobufMessageDecoder();
 	}
 	
 	

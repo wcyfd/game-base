@@ -11,10 +11,8 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
 
-import com.aim.game_base.entity.net.base.Protocal.CS;
-import com.aim.game_base.entity.net.base.Protocal.SC;
-import com.aim.game_base.net.ClientMessageCodecFactory;
-import com.aim.game_base.net.IoHandlerAdapter;
+import com.aim.game_base.entity.net.base.Protocal.PT;
+import com.aim.game_base.net.protocal.proto.ProtobufMessageCodecFactory;
 
 public class WanClient {
 	public enum WanClientType {
@@ -26,7 +24,7 @@ public class WanClient {
 	private InetSocketAddress inetSocketAddress = null;
 
 	public void startClient(IoHandlerAdapter handler, InetSocketAddress inetSocketAddress, WanClientType type) {
-		this.startClient(new ProtocolCodecFilter(new ClientMessageCodecFactory(Charset.forName("UTF-8"))), handler,
+		this.startClient(new ProtocolCodecFilter(new ProtobufMessageCodecFactory(Charset.forName("UTF-8"))), handler,
 				inetSocketAddress, type);
 	}
 
@@ -62,7 +60,7 @@ public class WanClient {
 		return session;
 	}
 
-	public void send(CS cs) {
+	public void send(PT cs) {
 		getSession().write(cs);
 	}
 

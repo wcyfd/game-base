@@ -1,4 +1,4 @@
-package com.aim.game_base.net;
+package com.aim.game_base.net.protocal.proto;
 
 import java.nio.ByteOrder;
 
@@ -7,9 +7,9 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.CumulativeProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 
-import com.aim.game_base.entity.net.base.Protocal.CS;
+import com.aim.game_base.entity.net.base.Protocal.PT;
 
-public class ServerMessageDecoder extends CumulativeProtocolDecoder {
+public class ProtobufMessageDecoder extends CumulativeProtocolDecoder {
 	protected boolean doDecode(IoSession session, IoBuffer in, ProtocolDecoderOutput out) throws Exception {
 
 		in.order(ByteOrder.LITTLE_ENDIAN);
@@ -35,8 +35,8 @@ public class ServerMessageDecoder extends CumulativeProtocolDecoder {
 			IoBuffer params = IoBuffer.wrap(data);
 			params.order(ByteOrder.LITTLE_ENDIAN);
 			
-			CS request = CS.parseFrom(data);
-			out.write(request);
+			PT pack = PT.parseFrom(data);
+			out.write(pack);
 
 			if (in.remaining() > 0) {
 				return true;

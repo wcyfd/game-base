@@ -15,6 +15,8 @@ import org.apache.mina.transport.socket.DatagramSessionConfig;
 import org.apache.mina.transport.socket.nio.NioDatagramAcceptor;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
+import com.aim.game_base.net.protocal.proto.ProtobufMessageCodecFactory;
+
 public class WanServer {
 	public static enum WanServerType {
 		TCP, UDP, HTTP;
@@ -30,7 +32,7 @@ public class WanServer {
 //	}
 
 	public static void startServer(IoHandlerAdapter handler, InetSocketAddress inetSocketAddress, WanServerType type) {
-		IoFilter ioFilter = new ProtocolCodecFilter(new ServerMessageCodecFactory(Charset.forName("UTF-8")));
+		IoFilter ioFilter = new ProtocolCodecFilter(new ProtobufMessageCodecFactory(Charset.forName("UTF-8")));
 		switch (type) {
 		case TCP:
 			startServer(ioFilter, handler, inetSocketAddress);
